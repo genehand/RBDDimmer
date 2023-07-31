@@ -6,7 +6,6 @@
 int pulseWidth = 1;
 volatile int current_dim = 0;
 int all_dim = 3;
-int rise_fall = true;
 char user_zero_cross = '0';
 int timeoutPin = 435; // 80us
 int extIntPin = 2; //z-c
@@ -58,7 +57,7 @@ void dimmerLamp::ext_int_init(void)
 {
 	int inPin = dimZCPin[this->current_num];
 	pinMode(inPin, INPUT_PULLUP);
-	attachInterrupt(inPin, isr_ext, FALLING);
+	attachInterrupt(digitalPinToInterrupt(inPin), isr_ext, FALLING);
 }
 
 
