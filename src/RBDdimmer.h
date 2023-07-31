@@ -33,7 +33,7 @@ typedef enum
     ON = true
 } ON_OFF_typedef;
 
-#define ALL_DIMMERS 30
+//#define ALL_DIMMERS 30
 
 class dimmerLamp 
 {         
